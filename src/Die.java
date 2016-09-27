@@ -4,9 +4,9 @@ public class Die
 	private final int MAX = 6; // maximum face value
 	private int faceValue; // current value showing on the die
 	
-	//-----------------------------------------------------------------
-	// Constructor: Sets the initial face value.
-	//-----------------------------------------------------------------
+	///-----------------------------------------------------------------
+	/// Constructor: Sets the initial face value.
+	///-----------------------------------------------------------------
 	public Die()
 	{
 	faceValue = 1;
