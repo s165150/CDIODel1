@@ -27,9 +27,9 @@ public class Players {
 	 * @param point
 	 * @return
 	 */
-	public int setPlayerScore(int point)
+	public int setPlayerScore(int p)
 	{
-		score = score + point;
+		score = score + p;
 		return score;
 	}
 	/**
