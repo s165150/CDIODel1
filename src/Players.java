@@ -17,8 +17,8 @@ public class Players {
 		
 		String player1;
 		String player2;
-		int a;
-		int counter;
+		int a, counter;
+
 		
 		//Here we randomize who is going to start.
 		//This is done by having a random number chosen between 1 and 2, 
@@ -52,11 +52,12 @@ public class Players {
 				counter++; //here we add +1 to the counter, to make it do the next loop.
 				}
 			//if the counter is then higher than 1 (2 in our case) it does the following
-		while(counter > 1)
+				while(counter > 1)
 				{
 				System.out.println("Player 2's turn");
 				System.out.println("Please roll the dice");
 				a = scan.nextInt();
+			
 				counter--; //here we subtract -1 to the counter, to make it do the first loop.
 				}
 		}
