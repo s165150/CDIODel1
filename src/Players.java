@@ -10,7 +10,7 @@ public class Players {
 	private int score;
 	private String nameOfPlayer;
 	/**
-	 * Creates the (Kan ikke huske hvad det hedder)
+	 * Creates the constructor
 	 * @param nr Reserves space for the players number, if it is player 1 or player 2
 	 * @param navn Reserves space for the players name.
 	 * @param point Reserves space for the players name
@@ -21,30 +21,58 @@ public class Players {
 		nameOfPlayer = name;
 		score = point;
 	}
-	
-	public int points(int point)
+	/**
+	 * calculates the players score. This is done by having the (int point) added to the score. 
+	 * (int point) can be any int, including int sum, from the main code.
+	 * @param point
+	 * @return
+	 */
+	public int setPlayerScore(int point)
 	{
 		score = score + point;
 		return score;
 	}
-	public String getPlayerName(String name)
+	/**
+	 * Sets the player name
+	 * @param name
+	 * @return
+	 */
+	public String setPlayerName(String name)
 	{
 		
 		nameOfPlayer = name;
 		return name;
 		
 	}
-	
-	public String getName()
+	/**
+	 * Returns the players name.
+	 * @return
+	 */
+	public String getPlayerName()
 	{
 		return nameOfPlayer;
 	}
-	
-	public int getSum()
+	/**
+	 * Returns the players current score.
+	 * @return
+	 */
+	public int getPlayerScore()
 	{
 		return score;
 	}
-	
+	/**
+	 * Resets a players score to 0.
+	 * @return
+	 */
+	public int resetPlayerScore()
+	{
+		score = 0;
+		return score;
+	}
+	public int ekstraTurn()
+	{
+		
+	}
 }
 
 //HUSKESEDDEL AF HVAD TANKEN ER!!!!!!

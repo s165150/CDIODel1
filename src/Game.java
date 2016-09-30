@@ -13,7 +13,7 @@ public class Game {
 			int count = (int) (Math.random()*2+1);
 			Die die1 = new Die();
 			Die die2 = new Die();
-			int sum1 = 2;
+			int sum1 = 0;
 			int sum2 = 0;
 			int sum = 0;
 			String s;
@@ -23,13 +23,13 @@ public class Game {
 			Players player2 = new Players (2, navn2, sum2);
 			
 			System.out.println("Indtast spiller 1's navn:");
-			navn1 = player1.getPlayerName(scan.nextLine());
+			navn1 = player1.setPlayerName(scan.nextLine());
 			System.out.println("Indtast spiller 2's navn:");
-			navn2 = player2.getPlayerName(scan.nextLine());
+			navn2 = player2.setPlayerName(scan.nextLine());
 			
 			
-			System.out.println(player1.getSum() + " " + player1.getName());
-			System.out.println(player2.getSum() + " " + player2.getName());
+			System.out.println(player1.getPlayerScore() + " " + player1.getPlayerName());
+			System.out.println(player2.getPlayerScore() + " " + player2.getPlayerName());
 			
 			
 			
@@ -40,38 +40,46 @@ public class Game {
 			
 		
 			
-			while (player1.getSum() < 41 & player2.getSum() < 41)
+			while (player1.getPlayerScore() < 40 & player2.getPlayerScore() < 40)
 			{
 				
 			while (count < 2)
 			{
-			System.out.println(player1.getName() + " please roll the dies");
+			System.out.println(player1.getPlayerName() + " please roll the dies");
 			s = scan.nextLine();
 			dice1 = die1.roll();
 			dice2 = die2.roll();
 			sum = dice1 + dice2;
-			sum  = player1.points(sum);
+			player1.setPlayerScore(sum);
+			if (sum == 2)
+			{
+				player1.resetPlayerScore();
+			}
 			
 			System.out.println ("Die One: " + dice1 + ", Die Two: " + dice2);
-			System.out.println("Sum of points: " + player1.getSum());
+			System.out.println("Sum of points: " + player1.getPlayerScore());
 			System.out.println();
 			count++;
 			}
-			if (player1.getSum() > 39)
+			if (player1.getPlayerScore() > 39)
 			{
 			break;
 			}
 			while (count > 1)
 			{
-				System.out.println(player2.getName() + " please roll the dies");
+				System.out.println(player2.getPlayerName() + " please roll the dies");
 				s = scan.nextLine();
 				dice1 = die1.roll();
 				dice2 = die2.roll();
 				sum = dice1 + dice2;
-				sum  = player2.points(sum);
+				player2.setPlayerScore(sum);
+				if (sum == 2)
+				{
+					player2.resetPlayerScore();
+				}
 				
 				System.out.println ("Die One: " + dice1 + ", Die Two: " + dice2);
-				System.out.println("Sum of points: " + player2.getSum());
+				System.out.println("Sum of points: " + player2.getPlayerScore());
 				System.out.println();
 				count--;
 			}
