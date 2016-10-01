@@ -10,8 +10,15 @@ public class Game {
 	Raffle cup = new Raffle ();
 	Players p1 = new Players (1, name1, 0);
 	Players p2 = new Players (2, name2, 0);
+	int sum = 0;
+	Rules rule = new Rules();
+	
 
 		
+			
+	
+	
+			
 			public void start()
 			{
 				System.out.println("Indtast spiller 1's navn:");
@@ -25,7 +32,7 @@ public class Game {
 			}
 	
 	
-			public void player1()
+			public void player1(p1)
 			{
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 				System.out.println(p1.getPlayerName() + " please roll the dies");
@@ -35,7 +42,7 @@ public class Game {
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				count++;
+				System.out.println(rule.fourty1());
 			}
 			
 			public void player2()
@@ -48,7 +55,7 @@ public class Game {
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p2.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				count--;
+				System.out.println(rule.fourty2(p2.getPlayerScore()));
 			}
 			
 			

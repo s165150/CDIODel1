@@ -5,20 +5,24 @@ public class Main {
 			
 			
 			Game start = new Game();
-			int count = (int) (Math.random()*2+1);
+			int count = (int) (Math.random()*101+1);
 			start.start();
 			
-			while(count < 2)
+			
+			while(count > 50)
 			{
 				start.player1();
+				start.player2();
 				count++;
 			}	
 			
-			while(count > 1)
+			while(count < 50)
 			{
 				start.player2();
+				start.player1();
 				count--;
 			}
+			
 			
 		}
 }
