@@ -69,12 +69,12 @@ public class Players {
 		score = 0;
 		return score;
 	}
-	public int ekstraTurn()
+	public void ekstraTurn()
 	{
 		
 	}
 }
 
 //HUSKESEDDEL AF HVAD TANKEN ER!!!!!!
-//Når du oprettet players med nr og point, har du bare reserveret plads til de.
-//så vi kan hele vejen igennem i Game vinduet ændre i players.point og få værdien ændret konstant.
+//Nï¿½r du oprettet players med nr og point, har du bare reserveret plads til de.
+//sï¿½ vi kan hele vejen igennem i Game vinduet ï¿½ndre i players.point og fï¿½ vï¿½rdien ï¿½ndret konstant.
