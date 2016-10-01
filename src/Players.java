@@ -6,8 +6,8 @@
  */
 public class Players {
 	
-	private int nummer;
-	private int score;
+	private int nummer = 0;
+	private int score = 0;
 	private String nameOfPlayer;
 	/**
 	 * Creates the constructor

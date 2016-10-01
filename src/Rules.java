@@ -1,8 +1,17 @@
 
 public class Rules {
-	Players p1, p2;
-	int sum1, sum2;
 	
+	Game run1, run2;
+	int sum1;
+	int sum2;
+	int count = (int) (Math.random()*2+1);
+
+	String name1 = "a";
+	String name2 = "a";
+	Raffle cup = new Raffle ();
+	public Players p1 = new Players (1, name1, 0);
+	public Players p2 = new Players (2, name2, 0);
+	int sum = 0;
 	
 	public Rules()
 	{
@@ -10,29 +19,28 @@ public class Rules {
 	}
 	
 	
-	public int fourty1()
+	public void fourty()
 	{
-		sum1 = p1.getPlayerScore();
-		return sum1;
-//		if (sum1 > 39)
-//		{
-//			System.out.println("Du vandt");
-//			System.exit(1);
-//		}
-//		
+
+			System.out.println("Du vandt");
+			System.exit(0);
 		
 	}
 	
-	public int fourty2(p2.getPlayerScore())
+	public void equals1()
 	{
-		sum2 = p2.getPlayerScore();
-		return sum2;
-//		if (sum2 > 39)
-//		{
-//			System.out.println("Du vandt");
-//			System.exit(1);
-//			
-//		}
-		
+		run1.player1();
 	}
+	
+	public void equals2()
+	{
+		run1.player2();
+	}
+	
+	public void resetPlayerScore(Players p1)
+	{
+		p1.resetPlayerScore();
+	
+	}
+	
 }
