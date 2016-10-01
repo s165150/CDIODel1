@@ -9,12 +9,16 @@ public class Main {
 			start.start();
 			
 			while(count < 2)
+			{
 				start.player1();
-				
+				count++;
+			}	
 			
 			while(count > 1)
+			{
 				start.player2();
-			
+				count--;
+			}
 			
 		}
 }
