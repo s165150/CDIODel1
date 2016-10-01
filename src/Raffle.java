@@ -1,32 +1,47 @@
 
 public class Raffle {
+	Die die1 = new Die();
+	Die die2 = new Die();
 	
-	Die die1, die2;
-	die1.setRoll();
-	die2.setRoll();
-	int dice1 = die1.getRoll();
-	int dice2 = die2.getRoll();
+	int d1, d2, score;
 	
 	
-	public Raffle ()
+	public Raffle(int dice1, int dice2, int sum)
 	{
-		
+		d1 = dice1;
+		d2 = dice2;
+		score = sum;
 	}
 	
-	public void setShake()
+	public void setDice1()
 	{
-		dice1 = die1.setRoll();
-		dice2 = 
-			
+		d1 = die1.getRoll();
+		}
+	
+	public int getDice1()
+	{
+		return d1;
 	}
-	/**
-	 * Returns the value of the dices.
-	 * @return
-	 */
-	public int getShake()
+	
+	public int setDice2()
 	{
-		return dice1+dice2;
-		
+		d2 = die2.getRoll();
+		return d2;
+	}
+	
+	public int getDice2()
+	{
+		return d2;
+	}
+	
+	public int setScore()
+	{
+		score = d1+d2;
+		return score;
+	}
+	public int getScore()
+	{
+		return score;
 	}
 	
 }
