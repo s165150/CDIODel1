@@ -25,7 +25,6 @@ public class Die
 	
 	public int getRoll()
 	{
-		faceValue = (int) (Math.random() * MAX + 1);
 		return faceValue;
 	}
 	}

@@ -3,44 +3,40 @@ public class Raffle {
 	Die die1 = new Die();
 	Die die2 = new Die();
 	
-	int d1, d2, score;
+	int raffleValue;
 	
 	
-	public Raffle(int dice1, int dice2, int sum)
+	public Raffle()
 	{
-		d1 = dice1;
-		d2 = dice2;
-		score = sum;
+		raffleValue = 0;
 	}
 	
-	public void setDice1()
+	public void setRaffle()
 	{
-		d1 = die1.getRoll();
-		}
-	
-	public int getDice1()
-	{
-		return d1;
+		die1.setRoll();
+		die2.setRoll();
 	}
 	
-	public void setDice2()
+	public int getRaffle()
 	{
-		d2 = die2.getRoll();
+		raffleValue = die1.getRoll() + die2.getRoll();
+		return raffleValue;
 	}
 	
-	public int getDice2()
+	public int getDie1()
 	{
-		return d2;
+		return die1.getRoll();
 	}
 	
-	public int setScore()
+	public int getDie2()
 	{
-		score = d1+d2;
-		return score;
-	}
-	public int getScore()
-	{
-		return score;
+		return die2.getRoll();
 	}
 	
+	public String toString()
+	{
+		String result = Integer.toString(raffleValue);
+		return result;
+		
+	}
 }
