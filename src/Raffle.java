@@ -2,19 +2,22 @@
 public class Raffle {
 	
 	Die die1, die2;
-	private int dice1, dice2;
-	int sum;
+	die1.setRoll();
+	die2.setRoll();
+	int dice1 = die1.getRoll();
+	int dice2 = die2.getRoll();
 	
-	public Raffle (int sum)
+	
+	public Raffle ()
 	{
-		int summen = sum;
+		
 	}
 	
 	public void setShake()
 	{
-		dice1 = die1.getRoll(); 
-		dice2 = die2.getRoll();
-		
+		dice1 = die1.setRoll();
+		dice2 = 
+			
 	}
 	/**
 	 * Returns the value of the dices.

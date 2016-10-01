@@ -13,7 +13,7 @@ public class Game {
 			int count = (int) (Math.random()*2+1);
 			Die die1 = new Die();
 			Die die2 = new Die();
-			Raffle cup = new Raffle(1);
+//			Raffle cup = new Raffle();
 			int sum1 = 0;
 			int sum2 = 0;
 			int sum = 0;
@@ -23,7 +23,6 @@ public class Game {
 			Players player1 = new Players (1, navn1, sum1);
 			Players player2 = new Players (2, navn2, sum2);
 			
-			sum1 = cup.setShake();
 			
 			System.out.println(cup.getShake());
 			
