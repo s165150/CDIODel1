@@ -23,10 +23,9 @@ public class Raffle {
 		return d1;
 	}
 	
-	public int setDice2()
+	public void setDice2()
 	{
 		d2 = die2.getRoll();
-		return d2;
 	}
 	
 	public int getDice2()
