@@ -35,6 +35,7 @@ public class Game {
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				count++;
 			}
 			
 			public void player2()
@@ -47,6 +48,7 @@ public class Game {
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p2.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				count--;
 			}
 			
 			
