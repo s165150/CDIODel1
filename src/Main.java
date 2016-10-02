@@ -1,13 +1,16 @@
+import desktop_resources.GUI;
 public class Main {
 
 		public static void main(String[] args) 
 		{
 			
-			
 			Game start = new Game();
+			Raffle cup;
+			GUI.setDice(4, 4);
 			int count = (int) (Math.random()*101+1);
+
 			start.start();
-			
+		
 			
 			while(count > 50)
 			{

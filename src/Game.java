@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import desktop_resources.GUI;
+
 public class Game {
 	
 	Scanner scan = new Scanner(System.in);
@@ -41,6 +43,7 @@ public class Game {
 				cup.setRaffle();
 				p1.setPlayerScore(cup.getRaffle());
 				p1.setLastRollValue(cup.getRaffle());
+				GUI.setDice(cup.getDie1(), cup.getDie2());
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
@@ -60,6 +63,7 @@ public class Game {
 				cup.setRaffle();
 				p2.setPlayerScore(cup.getRaffle());
 				p2.setLastRollValue(cup.getRaffle());
+				GUI.setDice(cup.getDie1(), cup.getDie2());
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p2.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");

@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import desktop_resources.GUI;
+
 public class Rule {
 	
 	Players p1, p2;
@@ -59,6 +61,7 @@ public class Rule {
 			cup.setRaffle();
 			p1.setPlayerScore(cup.getRaffle());
 			p1.setLastRollValue(cup.getRaffle());
+			GUI.setDice(cup.getDie1(), cup.getDie2());
 			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 			if (p1.getLastRollValue() == 12)
 			{
@@ -86,6 +89,7 @@ public class Rule {
 			cup.setRaffle();
 			p1.setPlayerScore(cup.getRaffle());
 			p1.setLastRollValue(cup.getRaffle());
+			GUI.setDice(cup.getDie1(), cup.getDie2());
 			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 			System.out.println("Sum of points: " + p1.getPlayerScore());
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
