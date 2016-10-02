@@ -12,20 +12,18 @@ public class Players {
 	private int dice1 = 0;
 	private int dice2 = 0;
 	private int sum = 0;
+	private int lastValue = 0;
 	/**
 	 * Creates the constructor
 	 * @param nr Reserves space for the players number, if it is player 1 or player 2
 	 * @param navn Reserves space for the players name.
 	 * @param point Reserves space for the players name
 	 */
-	public Players (int nr, String name, int point, int die1, int die2, int summen)
+	public Players (int nr, String name, int point)
 	{
 		nummer = nr;
 		nameOfPlayer = name;
 		score = point;
-		dice1 = die1;
-		dice2 = die2;
-		sum = summen;
 	}
 	public void setDie1(int p)
 	{
@@ -92,8 +90,13 @@ public class Players {
 		return score;
 	}
 	
+	public void setLastRollValue(int p)
+	{
+		lastValue = p;
+	}
+	
+	public int getLastRollValue()
+	{
+		return lastValue;
+	}
 }
-
-//HUSKESEDDEL AF HVAD TANKEN ER!!!!!!
-//N�r du oprettet players med nr og point, har du bare reserveret plads til de.
-//s� vi kan hele vejen igennem i Game vinduet �ndre i players.point og f� v�rdien �ndret konstant.

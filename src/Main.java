@@ -12,15 +12,15 @@ public class Main {
 			
 			while(count > 50)
 			{
-				start.player(p1);
-				start.player(p2);
+				start.player1();
+				start.player2();
 				count++;
 			}	
 			
 			while(count < 50)
 			{
-				start.player(p1);
-				start.player(p2);
+				start.player2();
+				start.player1();
 				count--;
 			}
 			
