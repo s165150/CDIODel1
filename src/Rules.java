@@ -9,8 +9,9 @@ public class Rules {
 	String name1 = "a";
 	String name2 = "a";
 	Raffle cup = new Raffle ();
-	public Players p1 = new Players (1, name1, 0);
-	public Players p2 = new Players (2, name2, 0);
+	public Players p1 = new Players (1, name1, 0, 0, 0, 0);
+	public Players p2 = new Players (2, name2, 0, 0, 0, 0);
+	Game run = new Game();
 	int sum = 0;
 	
 	public Rules()
@@ -30,11 +31,11 @@ public class Rules {
 		
 	}
 // VIRKER IKKE	
-	public void equals1(Raffle cup, Game run)
+	public void equals1(Players p1)
 	{
-		if (cup.getDie1() == cup.getDie2())
+		if (p1.getDie1() == p1.getDie2())
 		{	
-		run.player1();
+		run.player(p1);
 		}
 	}
 	

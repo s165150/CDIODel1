@@ -9,17 +9,39 @@ public class Players {
 	private int nummer = 0;
 	private int score = 0;
 	private String nameOfPlayer;
+	private int dice1 = 0;
+	private int dice2 = 0;
+	private int sum = 0;
 	/**
 	 * Creates the constructor
 	 * @param nr Reserves space for the players number, if it is player 1 or player 2
 	 * @param navn Reserves space for the players name.
 	 * @param point Reserves space for the players name
 	 */
-	public Players (int nr, String name, int point)
+	public Players (int nr, String name, int point, int die1, int die2, int summen)
 	{
 		nummer = nr;
 		nameOfPlayer = name;
 		score = point;
+		dice1 = die1;
+		dice2 = die2;
+		sum = summen;
+	}
+	public void setDie1(int p)
+	{
+		dice1 = p;
+	}
+	public void setDie2(int p)
+	{
+		dice2 = p;
+	}
+	public int getDie1()
+	{
+		return dice1;
+	}
+	public int getDie2()
+	{
+		return dice2;
 	}
 	/**
 	 * calculates the players score. This is done by having the (int point) added to the score. 
@@ -69,10 +91,7 @@ public class Players {
 		score = 0;
 		return score;
 	}
-	public void ekstraTurn()
-	{
-		
-	}
+	
 }
 
 //HUSKESEDDEL AF HVAD TANKEN ER!!!!!!
