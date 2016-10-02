@@ -8,8 +8,8 @@ public class Game {
 	String name1 = "a";
 	String name2 = "a";
 	Raffle cup = new Raffle ();
-	public Players p1 = new Players (1, name1, 0);
-	public Players p2 = new Players (2, name2, 0);
+	public Players p1 = new Players (name1, 0);
+	public Players p2 = new Players (name2, 0);
 	int sum = 0;
 	Rule rule = new Rule();
 	Die die1, die2;

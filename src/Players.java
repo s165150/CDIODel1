@@ -6,12 +6,10 @@
  */
 public class Players {
 	
-	private int nummer = 0;
 	private int score = 0;
 	private String nameOfPlayer;
 	private int dice1 = 0;
 	private int dice2 = 0;
-	private int sum = 0;
 	private int lastValue = 0;
 	/**
 	 * Creates the constructor
@@ -19,28 +17,12 @@ public class Players {
 	 * @param navn Reserves space for the players name.
 	 * @param point Reserves space for the players name
 	 */
-	public Players (int nr, String name, int point)
+	public Players (String name, int point)
 	{
-		nummer = nr;
 		nameOfPlayer = name;
 		score = point;
 	}
-	public void setDie1(int p)
-	{
-		dice1 = p;
-	}
-	public void setDie2(int p)
-	{
-		dice2 = p;
-	}
-	public int getDie1()
-	{
-		return dice1;
-	}
-	public int getDie2()
-	{
-		return dice2;
-	}
+	
 	/**
 	 * calculates the players score. This is done by having the (int point) added to the score. 
 	 * (int point) can be any int, including int sum, from the main code.
@@ -89,12 +71,19 @@ public class Players {
 		score = 0;
 		return score;
 	}
-	
+	/**
+	 * Stores the last roll the player made. This is done so we can see if he scores 2 6's 2 times in a row.
+	 * @param p
+	 */
 	public void setLastRollValue(int p)
 	{
 		lastValue = p;
 	}
 	
+	/**
+	 * Returns the last roll the player made.
+	 * @return
+	 */
 	public int getLastRollValue()
 	{
 		return lastValue;

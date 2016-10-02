@@ -11,10 +11,17 @@ public class Die
 	private final int MAX = 6;
 	private int faceValue;
 	
+	/**
+	 * Creates the constructor Die.
+	 */
 	public Die()
 	{
 		faceValue = 1;
 	}
+	
+	/**
+	 * This method rolls the die for us.
+	 */
 	public void setRoll() {
 		
 		
@@ -22,7 +29,10 @@ public class Die
 		
 		}
 	
-	
+	/**
+	 * This returns the die's value.
+	 * @return
+	 */
 	public int getRoll()
 	{
 		return faceValue;

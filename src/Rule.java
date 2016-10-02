@@ -9,6 +9,12 @@ public class Rule {
 	Game runagain;
 	Scanner scan = new Scanner(System.in);
 	
+	
+	/**
+	 * Creates the rule about if a player gets above 40 points and hit 2 equals, he wins.
+	 * @param p1
+	 * @param cup
+	 */
 	public void fourty(Players p1, Raffle cup)
 	{
 		if (p1.getPlayerScore()>200)
@@ -21,21 +27,33 @@ public class Rule {
 			}
 		}
 	}
-	
+	/**
+	 * Creates the rule about snakeeyes. If the player hits double aces, his score gets reset.
+	 * @param p1
+	 * @param cup
+	 */
 	public void snakeEyes(Players p1, Raffle cup)
 	{
 		if (p1.getLastRollValue() == 2 && cup.getRaffle() == 2)
 		{
+			System.out.println("Your score has been reset. Stay away from snakes!");
 			p1.resetPlayerScore();			
 		}
 		
 		
 	}
+	/**
+	 * Set the rule that when the player hits 2 6'es he gets a chance to win the game. The extra WIN turn is not counted into his points.
+	 * @param p1
+	 * @param cup
+	 */
 	public void themSixes(Players p1, Raffle cup)
 	{
 		if (p1.getLastRollValue() == 12)
 		{
+			
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+			System.out.println("You just hit them double 6's. Try again and win the game");
 			System.out.println(p1.getPlayerName() + " please roll the dies");
 			scan.nextLine();
 			cup.setRaffle();
@@ -48,13 +66,17 @@ public class Rule {
 				System.out.println("Jackpot! You got two sixes in a row!");
 				System.exit(0);	
 			}
+			System.out.println("Better luck next time");
 		}
 	}
+	/**
+	 * Creates the rule that when the player hits 2 equal eyes, he gets another turn.
+	 * @param p1
+	 * @param cup
+	 */
 	public void equals(Players p1, Raffle cup)
 	{
-		int dice1 = cup.getDie1();
-		int dice2 = cup.getDie2();
-		
+
 		while (cup.getDie1() == cup.getDie2())
 		{
 			System.out.println("EXTRA TURN");
