@@ -8,8 +8,6 @@ public class Players {
 	
 	private int score = 0;
 	private String nameOfPlayer;
-	private int dice1 = 0;
-	private int dice2 = 0;
 	private int lastValue = 0;
 	/**
 	 * Creates the constructor
