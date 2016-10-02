@@ -8,7 +8,6 @@ public class Rule {
 	Raffle cup;
 	Game runagain;
 	Scanner scan = new Scanner(System.in);
-		
 	
 	public void fourty(Players p1, Raffle cup)
 	{
@@ -53,8 +52,12 @@ public class Rule {
 	}
 	public void equals(Players p1, Raffle cup)
 	{
-		if (cup.getDie1() == cup.getDie2())
+		int dice1 = cup.getDie1();
+		int dice2 = cup.getDie2();
+		
+		while (cup.getDie1() == cup.getDie2())
 		{
+			System.out.println("EXTRA TURN");
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 			System.out.println(p1.getPlayerName() + " please roll the dies");
 			scan.nextLine();
@@ -64,6 +67,9 @@ public class Rule {
 			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 			System.out.println("Sum of points: " + p1.getPlayerScore());
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+			snakeEyes(p1, cup);
+			fourty(p1, cup);
+			themSixes(p1, cup);
 		}
 	}
 }

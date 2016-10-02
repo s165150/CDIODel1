@@ -45,10 +45,10 @@ public class Game {
 				System.out.println("Sum of points: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 				rule.snakeEyes(p1, cup); 
-				rule.equals(p1, cup);
 				rule.fourty(p1, cup);
 				rule.themSixes(p1, cup);
-				rule.equals(cup);
+				rule.equals(p1, cup);
+				
 				
 			}
 			
@@ -64,10 +64,10 @@ public class Game {
 				System.out.println("Sum of points: " + p2.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 				rule.snakeEyes(p2, cup);
-				rule.equals(p2, cup);
 				rule.fourty(p2, cup);
 				rule.themSixes(p2, cup);
 				rule.equals(p2, cup);
+				
 								
 			}
 			
