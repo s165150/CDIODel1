@@ -1,7 +1,7 @@
 
 public class Rules {
 	
-	Game run1, run2;
+	
 	int sum1;
 	int sum2;
 	int count = (int) (Math.random()*2+1);
@@ -19,27 +19,49 @@ public class Rules {
 	}
 	
 	
-	public void fourty()
+	public void fourty(Players p1)
 	{
 
-			System.out.println("Du vandt");
+		if (p1.getPlayerScore() > 39)
+		{
+			System.out.print("You won!");
 			System.exit(0);
+		}
 		
 	}
-	
-	public void equals1()
+// VIRKER IKKE	
+	public void equals1(Raffle cup, Game run)
 	{
-		run1.player1();
+		if (cup.getDie1() == cup.getDie2())
+		{	
+		run.player1();
+		}
 	}
 	
-	public void equals2()
+		
+	
+
+// VIRKER IKKE
+	public void equals2(Raffle cup, Game run)
 	{
-		run1.player2();
+		if (cup.getDie1() == cup.getDie2())
+		{	
+		run.player2();
+		}
 	}
 	
-	public void resetPlayerScore(Players p1)
+		
+	
+
+
+	public void resetPlayerScore(Raffle cup, Players p1)
 	{
+		if (cup.getRaffle() == 7)
+		{
 		p1.resetPlayerScore();
+		p1.getPlayerScore();
+		System.out.println("Your score has been reset");
+		}
 	
 	}
 	

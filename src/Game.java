@@ -42,19 +42,9 @@ public class Game {
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				if (p1.getPlayerScore() > 39)
-					{
-					rule.fourty();
-					}
-				if (cup.getDie1() == cup.getDie2())
-				{
-					player1();
-				}
-				if (p1.getPlayerScore() == 7)
-				{
-					rule.resetPlayerScore(p1);
-					p1.getPlayerScore();
-				}
+				rule.fourty(p1);
+				//rule.equals1(cup, player1); VIRKER IKKE
+				rule.resetPlayerScore(cup, p2);
 			}
 			
 			public void player2()
@@ -67,19 +57,9 @@ public class Game {
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p2.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				if (p2.getPlayerScore() > 39)
-				{
-				rule.fourty();
-				}
-				if (cup.getDie1() == cup.getDie2())
-				{
-					player2();
-				}
-				if (p2.getPlayerScore() == 7)
-				{
-					rule.resetPlayerScore(p2);
-					p2.getPlayerScore();
-				}
+				rule.fourty(p2);
+				//rule.equals2(cup, null); VIRKER IKKE
+				rule.resetPlayerScore(cup, p1);
 			}
 			
 			
