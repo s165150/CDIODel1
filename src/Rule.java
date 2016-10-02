@@ -51,5 +51,19 @@ public class Rule {
 			}
 		}
 	}
-	
+	public void equals(Players p1, Raffle cup)
+	{
+		if (cup.getDie1() == cup.getDie2())
+		{
+			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+			System.out.println(p1.getPlayerName() + " please roll the dies");
+			scan.nextLine();
+			cup.setRaffle();
+			p1.setPlayerScore(cup.getRaffle());
+			p1.setLastRollValue(cup.getRaffle());
+			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
+			System.out.println("Sum of points: " + p1.getPlayerScore());
+			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+		}
+	}
 }
