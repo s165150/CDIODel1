@@ -1,8 +1,8 @@
 /**
- * Her går vi ind og navngiver et blueprint (class) Die.
- * Inde i den Die, har vi så en roll. Når vi så vil "kalde" den i andre dele skrives der
- * die.roll(); Det betyder at den kalder klassen die, og så derefter funktionen roll.
- * Den returnere her så det skrevne, og vi har så en klasse der returnere et terningekast
+ * Her gï¿½r vi ind og navngiver et blueprint (class) Die.
+ * Inde i den Die, har vi sï¿½ en roll. Nï¿½r vi sï¿½ vil "kalde" den i andre dele skrives der
+ * die.roll(); Det betyder at den kalder klassen die, og sï¿½ derefter funktionen roll.
+ * Den returnere her sï¿½ det skrevne, og vi har sï¿½ en klasse der returnere et terningekast
  * @author aleks
  *
  */
@@ -11,20 +11,29 @@ public class Die
 	private final int MAX = 6;
 	private int faceValue;
 	
+	/**
+	 * Creates the constructor Die.
+	 */
 	public Die()
 	{
 		faceValue = 1;
 	}
-	public int roll() {
+	
+	/**
+	 * This method rolls the die for us.
+	 */
+	public void setRoll() {
 		
 		
 		faceValue = (int) (Math.random() * MAX + 1);
 		
-		return faceValue;
-	}
+		}
 	
-	
-	public int getFacevalue()
+	/**
+	 * This returns the die's value.
+	 * @return
+	 */
+	public int getRoll()
 	{
 		return faceValue;
 	}

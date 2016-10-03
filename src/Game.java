@@ -1,92 +1,85 @@
 import java.util.Scanner;
 
+import desktop_resources.GUI;
+
 public class Game {
+	
+	Scanner scan = new Scanner(System.in);
+	int count = (int) (Math.random()*2+1);
 
-		public static void main(String[] args) 
-		{
-			
-			
-			
-			Scanner scan = new Scanner(System.in);
-			int dice1, dice2;
+	String name1 = "a";
+	String name2 = "a";
+	Raffle cup = new Raffle ();
+	public Players p1 = new Players (name1, 0);
+	public Players p2 = new Players (name2, 0);
+	int sum = 0;
+	Rule rule = new Rule();
+	Die die1, die2;
+	
 
-			int count = (int) (Math.random()*2+1);
-			Die die1 = new Die();
-			Die die2 = new Die();
-			int sum1 = 0;
-			int sum2 = 0;
-			int sum = 0;
-			String s;
-			String navn1 = "a";
-			String navn2 = "a";
-			Players player1 = new Players (1, navn1, sum1);
-			Players player2 = new Players (2, navn2, sum2);
-			
-			System.out.println("Indtast spiller 1's navn:");
-			navn1 = player1.setPlayerName(scan.nextLine());
-			System.out.println("Indtast spiller 2's navn:");
-			navn2 = player2.setPlayerName(scan.nextLine());
-			
-			
-			System.out.println(player1.getPlayerScore() + " " + player1.getPlayerName());
-			System.out.println(player2.getPlayerScore() + " " + player2.getPlayerName());
-			
-			
-			
-			
-			
-			
-			
-			
 		
 			
-			while (player1.getPlayerScore() < 40 & player2.getPlayerScore() < 40)
+	
+	
+			
+			public void start()
 			{
+				System.out.println("Indtast spiller 1's navn:");
+				name1 = p1.setPlayerName(scan.nextLine());
+				System.out.println("Indtast spiller 2's navn:");
+				name2 = p2.setPlayerName(scan.nextLine());
 				
-			while (count < 2)
+				
+				System.out.println(p1.getPlayerScore() + " " + p1.getPlayerName());
+				System.out.println(p2.getPlayerScore() + " " + p2.getPlayerName());	
+			}
+	
+	
+			public void player1()
 			{
-			System.out.println(player1.getPlayerName() + " please roll the dies");
-			s = scan.nextLine();
-			dice1 = die1.roll();
-			dice2 = die2.roll();
-			sum = dice1 + dice2;
-			player1.setPlayerScore(sum);
-			if (sum == 2)
-			{
-				player1.resetPlayerScore();
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				System.out.println(p1.getPlayerName() + " please roll the dies");
+				scan.nextLine();
+				cup.setRaffle();
+				p1.setPlayerScore(cup.getRaffle());
+				p1.setLastRollValue(cup.getRaffle());
+				GUI.setDice(cup.getDie1(), cup.getDie2());
+				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
+				System.out.println("Sum of points: " + p1.getPlayerScore());
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				rule.snakeEyes(p1, cup); 
+				rule.fourty(p1, cup);
+				rule.themSixes(p1, cup);
+				rule.equals(p1, cup);
+				
+				
 			}
 			
-			System.out.println ("Die One: " + dice1 + ", Die Two: " + dice2);
-			System.out.println("Sum of points: " + player1.getPlayerScore());
-			System.out.println();
-			count++;
-			}
-			if (player1.getPlayerScore() > 39)
+			public void player2()
 			{
-			break;
-			}
-			while (count > 1)
-			{
-				System.out.println(player2.getPlayerName() + " please roll the dies");
-				s = scan.nextLine();
-				dice1 = die1.roll();
-				dice2 = die2.roll();
-				sum = dice1 + dice2;
-				player2.setPlayerScore(sum);
-				if (sum == 2)
-				{
-					player2.resetPlayerScore();
-				}
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				System.out.println(p2.getPlayerName() + " please roll the dies");
+				scan.nextLine();
+				cup.setRaffle();
+				p2.setPlayerScore(cup.getRaffle());
+				p2.setLastRollValue(cup.getRaffle());
+				GUI.setDice(cup.getDie1(), cup.getDie2());
+				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
+				System.out.println("Sum of points: " + p2.getPlayerScore());
+				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+				rule.snakeEyes(p2, cup);
+				rule.fourty(p2, cup);
+				rule.themSixes(p2, cup);
+				rule.equals(p2, cup);
 				
-				System.out.println ("Die One: " + dice1 + ", Die Two: " + dice2);
-				System.out.println("Sum of points: " + player2.getPlayerScore());
-				System.out.println();
-				count--;
-			}
+								
 			}
 			
-			System.out.println("Du vandt");
+			
+			
+
 
 	}
-}
+
+
 

@@ -6,21 +6,21 @@
  */
 public class Players {
 	
-	private int nummer;
-	private int score;
+	private int score = 0;
 	private String nameOfPlayer;
+	private int lastValue = 0;
 	/**
 	 * Creates the constructor
 	 * @param nr Reserves space for the players number, if it is player 1 or player 2
 	 * @param navn Reserves space for the players name.
 	 * @param point Reserves space for the players name
 	 */
-	public Players (int nr, String name, int point)
+	public Players (String name, int point)
 	{
-		nummer = nr;
 		nameOfPlayer = name;
 		score = point;
 	}
+	
 	/**
 	 * calculates the players score. This is done by having the (int point) added to the score. 
 	 * (int point) can be any int, including int sum, from the main code.
@@ -69,12 +69,21 @@ public class Players {
 		score = 0;
 		return score;
 	}
-	public int ekstraTurn()
+	/**
+	 * Stores the last roll the player made. This is done so we can see if he scores 2 6's 2 times in a row.
+	 * @param p
+	 */
+	public void setLastRollValue(int p)
 	{
-		
+		lastValue = p;
+	}
+	
+	/**
+	 * Returns the last roll the player made.
+	 * @return
+	 */
+	public int getLastRollValue()
+	{
+		return lastValue;
 	}
 }
-
-//HUSKESEDDEL AF HVAD TANKEN ER!!!!!!
-//Når du oprettet players med nr og point, har du bare reserveret plads til de.
-//så vi kan hele vejen igennem i Game vinduet ændre i players.point og få værdien ændret konstant.
