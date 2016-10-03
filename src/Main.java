@@ -5,10 +5,8 @@ public class Main {
 		{
 			
 			Game start = new Game();
-			Raffle cup;
 			GUI.setDice(4, 4);
 			int count = (int) (Math.random()*101+1);
-
 			start.start();
 		
 			
