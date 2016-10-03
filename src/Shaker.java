@@ -1,22 +1,22 @@
 
-public class Raffle {
+public class Shaker {
 	Die die1 = new Die();
 	Die die2 = new Die();
 	
-	int raffleValue;
+	private int shakeValue;
 	
 	/**
-	 * Creates the constructor, Raffle.
+	 * Creates the constructor, Shaker.
 	 */
-	public Raffle()
+	public Shaker()
 	{
-		raffleValue = 0;
+		shakeValue = 0;
 	}
 	
 	/**
-	 * Rolls the dices, but doesnt return a value.
+	 * Rolls the dices, but doesn't return a value.
 	 */
-	public void setRaffle()
+	public void setShake()
 	{
 		die1.setRoll();
 		die2.setRoll();
@@ -25,10 +25,10 @@ public class Raffle {
 	 * Returns the value of the roll.
 	 * @return
 	 */
-	public int getRaffle()
+	public int getShake()
 	{
-		raffleValue = die1.getRoll() + die2.getRoll();
-		return raffleValue;
+		shakeValue = die1.getRoll() + die2.getRoll();
+		return shakeValue;
 	}
 	/**
 	 * Returns the value of Die1 from the roll.
@@ -49,11 +49,11 @@ public class Raffle {
 	}
 	
 	/**
-	 * Converts the rafflevalue from int to string.
+	 * Converts the shakeValue from int to string.
 	 */
 	public String toString()
 	{
-		String result = Integer.toString(raffleValue);
+		String result = Integer.toString(shakeValue);
 		return result;
 		
 	}

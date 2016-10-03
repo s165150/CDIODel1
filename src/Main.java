@@ -4,24 +4,24 @@ public class Main {
 		public static void main(String[] args) 
 		{
 			
-			Game start = new Game();
+			Game startGame = new Game();
 			GUI.setDice(4, 4);
-			int count = (int) (Math.random()*101+1);
-			start.start();
+			int turnCount = (int) (Math.random()*101+1);
+			startGame.start();
 		
 			
-			while(count > 50)
+			while(turnCount > 50)
 			{
-				start.player1();
-				start.player2();
-				count++;
+				startGame.player1();
+				startGame.player2();
+				turnCount++;
 			}	
 			
-			while(count < 50)
+			while(turnCount < 50)
 			{
-				start.player2();
-				start.player1();
-				count--;
+				startGame.player2();
+				startGame.player1();
+				turnCount--;
 			}
 			
 			

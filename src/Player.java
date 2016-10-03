@@ -4,7 +4,7 @@
  * @author aleks
  *
  */
-public class Players {
+public class Player {
 	
 	private int score = 0;
 	private String nameOfPlayer;
@@ -15,7 +15,7 @@ public class Players {
 	 * @param navn Reserves space for the players name.
 	 * @param point Reserves space for the players name
 	 */
-	public Players (String name, int point)
+	public Player (String name, int point)
 	{
 		nameOfPlayer = name;
 		score = point;
@@ -27,9 +27,9 @@ public class Players {
 	 * @param point
 	 * @return
 	 */
-	public int setPlayerScore(int p)
+	public int setPlayerScore(int currentShakerValue)
 	{
-		score = score + p;
+		score = score + currentShakerValue;
 		return score;
 	}
 	/**
@@ -37,11 +37,10 @@ public class Players {
 	 * @param name
 	 * @return
 	 */
-	public String setPlayerName(String name)
+	public  void setPlayerName(String name)
 	{
 		
 		nameOfPlayer = name;
-		return name;
 		
 	}
 	/**
@@ -73,9 +72,9 @@ public class Players {
 	 * Stores the last roll the player made. This is done so we can see if he scores 2 6's 2 times in a row.
 	 * @param p
 	 */
-	public void setLastRollValue(int p)
+	public void setLastRollValue(int currentShakerValue)
 	{
-		lastValue = p;
+		lastValue = currentShakerValue;
 	}
 	
 	/**

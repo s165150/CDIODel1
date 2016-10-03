@@ -5,13 +5,11 @@ import desktop_resources.GUI;
 public class Game {
 	
 	Scanner scan = new Scanner(System.in);
-	int count = (int) (Math.random()*2+1);
-
 	String name1 = "a";
 	String name2 = "a";
-	Raffle cup = new Raffle ();
-	public Players p1 = new Players (name1, 0);
-	public Players p2 = new Players (name2, 0);
+	Shaker cup = new Shaker ();
+	public Player p1 = new Player (name1, 0);
+	public Player p2 = new Player (name2, 0);
 	int sum = 0;
 	Rule rule = new Rule();
 	Die die1, die2;
@@ -25,11 +23,12 @@ public class Game {
 			public void start()
 			{
 				System.out.println("Indtast spiller 1's navn:");
-				name1 = p1.setPlayerName(scan.nextLine());
+				p1.setPlayerName(scan.next());
+//				name1 = scan.nextLine();
+//				p1.setPlayerName(name1);
 				System.out.println("Indtast spiller 2's navn:");
-				name2 = p2.setPlayerName(scan.nextLine());
-				
-				
+				p2.setPlayerName(scan.next());
+				scan.nextLine();
 				System.out.println(p1.getPlayerScore() + " " + p1.getPlayerName());
 				System.out.println(p2.getPlayerScore() + " " + p2.getPlayerName());	
 			}
@@ -40,17 +39,17 @@ public class Game {
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 				System.out.println(p1.getPlayerName() + " please roll the dies");
 				scan.nextLine();
-				cup.setRaffle();
-				p1.setPlayerScore(cup.getRaffle());
-				p1.setLastRollValue(cup.getRaffle());
+				cup.setShake();
+				p1.setPlayerScore(cup.getShake());
+				p1.setLastRollValue(cup.getShake());
 				GUI.setDice(cup.getDie1(), cup.getDie2());
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				rule.snakeEyes(p1, cup); 
-				rule.fourty(p1, cup);
-				rule.themSixes(p1, cup);
-				rule.equals(p1, cup);
+				rule.ruleSnakeEyes(p1, cup); 
+				rule.ruleForty(p1, cup);
+				rule.ruleThemSixes(p1, cup, scan);
+				rule.ruleEquals(p1, cup, scan);
 				
 				
 			}
@@ -60,17 +59,17 @@ public class Game {
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 				System.out.println(p2.getPlayerName() + " please roll the dies");
 				scan.nextLine();
-				cup.setRaffle();
-				p2.setPlayerScore(cup.getRaffle());
-				p2.setLastRollValue(cup.getRaffle());
+				cup.setShake();
+				p2.setPlayerScore(cup.getShake());
+				p2.setLastRollValue(cup.getShake());
 				GUI.setDice(cup.getDie1(), cup.getDie2());
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Sum of points: " + p2.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				rule.snakeEyes(p2, cup);
-				rule.fourty(p2, cup);
-				rule.themSixes(p2, cup);
-				rule.equals(p2, cup);
+				rule.ruleSnakeEyes(p2, cup);
+				rule.ruleForty(p2, cup);
+				rule.ruleThemSixes(p2, cup, scan);
+				rule.ruleEquals(p2, cup, scan);
 				
 								
 			}
