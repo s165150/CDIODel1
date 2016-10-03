@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-import desktop_resources.GUI;
+//import desktop_resources.GUI;
 
 public class Game {
 	
@@ -36,14 +36,14 @@ public class Game {
 			public void player(Player p1, Shaker cup, Rule rule)
 			{
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-				System.out.println(p1.getPlayerName() + " please roll the dies");
+				System.out.println(p1.getPlayerName() + " please roll the dice");
 				scan.nextLine();
 				cup.setShake();
 				p1.setPlayerScore(cup.getShake());
 				p1.setLastRollValue(cup.getShake());
-				GUI.setDice(cup.getDie1(), cup.getDie2());
+				//GUI.setDice(cup.getDie1(), cup.getDie2());
 				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
-				System.out.println("Sum of points: " + p1.getPlayerScore());
+				System.out.println("Sum of dice: " + p1.getPlayerScore());
 				System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
 				rule.ruleSnakeEyes(p1, cup); 
 				rule.ruleForty(p1, cup);

@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-import desktop_resources.GUI;
+//import desktop_resources.GUI;
 
 public class Rule {
 	
 	/**
-	 * Creates the rule about if a player gets above 40 points and hit 2 equals, he wins.
+	 * Creates the rule that states that if a player gets more than 40 points and then hits 2 equals, he/she wins.
 	 * @param p1
 	 * @param cup
 	 */
@@ -21,7 +21,7 @@ public class Rule {
 		}
 	}
 	/**
-	 * Creates the rule about snakeeyes. If the player hits double aces, his score gets reset.
+	 * Creates the rule for snakeeyes. If the player hits double aces, his/her score gets reset.
 	 * @param p1
 	 * @param cup
 	 */
@@ -36,7 +36,7 @@ public class Rule {
 		
 	}
 	/**
-	 * Set the rule that when the player hits 2 6'es he gets a chance to win the game. The extra WIN turn is not counted into his points.
+	 * Sets the rule that when the player hits 2 6's he/she gets a chance to win the game. The extra WIN turn is not counted into his/her points.
 	 * @param p1
 	 * @param cup
 	 */
@@ -52,7 +52,7 @@ public class Rule {
 			cup.setShake();
 			p1.setPlayerScore(cup.getShake());
 			p1.setLastRollValue(cup.getShake());
-			GUI.setDice(cup.getDie1(), cup.getDie2());
+			//GUI.setDice(cup.getDie1(), cup.getDie2());
 			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 			if (p1.getLastRollValue() == 12)
 			{
@@ -64,7 +64,7 @@ public class Rule {
 		}
 	}
 	/**
-	 * Creates the rule that when the player hits 2 equal eyes, he gets another turn.
+	 * Creates the rule that when the player hits 2 equal eyes, he/she gets another turn.
 	 * @param p1
 	 * @param cup
 	 */
@@ -80,7 +80,7 @@ public class Rule {
 			cup.setShake();
 			p1.setPlayerScore(cup.getShake());
 			p1.setLastRollValue(cup.getShake());
-			GUI.setDice(cup.getDie1(), cup.getDie2());
+			//GUI.setDice(cup.getDie1(), cup.getDie2());
 			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 			System.out.println("Sum of points: " + p1.getPlayerScore());
 			System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");

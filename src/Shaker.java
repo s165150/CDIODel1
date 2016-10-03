@@ -14,7 +14,7 @@ public class Shaker {
 	}
 	
 	/**
-	 * Rolls the dices, but doesn't return a value.
+	 * Rolls the dice, but doesn't return a value.
 	 */
 	public void setShake()
 	{
@@ -49,7 +49,7 @@ public class Shaker {
 	}
 	
 	/**
-	 * Converts the shakeValue from int to string.
+	 * Converts the shakeValue from an int to a string.
 	 */
 	public String toString()
 	{

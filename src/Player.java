@@ -1,6 +1,6 @@
 /**
- * Players class is created to keep track of the players name, and their current score in the game.
- * The way it does it is explained further down.
+ * Player class is created to keep track of the player's name, and their current score in the game.
+ * The way this is done is explained below.
  * @author aleks
  *
  */
@@ -11,9 +11,9 @@ public class Player {
 	private int lastValue = 0;
 	/**
 	 * Creates the constructor
-	 * @param nr Reserves space for the players number, if it is player 1 or player 2
-	 * @param navn Reserves space for the players name.
-	 * @param point Reserves space for the players name
+	 * @param nr reserves space for the player's number, either player 1 or player 2
+	 * @param navn reserves space for the player's name.
+	 * @param point reserves space for the player's name
 	 */
 	public Player (String name, int point)
 	{
@@ -22,7 +22,7 @@ public class Player {
 	}
 	
 	/**
-	 * calculates the players score. This is done by having the (int point) added to the score. 
+	 * calculates the player's score. This is done by having the (int point) added to the score. 
 	 * (int point) can be any int, including int sum, from the main code.
 	 * @param point
 	 * @return
@@ -33,7 +33,7 @@ public class Player {
 		return score;
 	}
 	/**
-	 * Sets the player name
+	 * Sets the player's name
 	 * @param name
 	 * @return
 	 */
@@ -44,7 +44,7 @@ public class Player {
 		
 	}
 	/**
-	 * Returns the players name.
+	 * Returns the player's name.
 	 * @return
 	 */
 	public String getPlayerName()
@@ -52,7 +52,7 @@ public class Player {
 		return nameOfPlayer;
 	}
 	/**
-	 * Returns the players current score.
+	 * Returns the player's current score.
 	 * @return
 	 */
 	public int getPlayerScore()
@@ -60,7 +60,7 @@ public class Player {
 		return score;
 	}
 	/**
-	 * Resets a players score to 0.
+	 * Resets a player's score to 0.
 	 * @return
 	 */
 	public int resetPlayerScore()
@@ -69,7 +69,7 @@ public class Player {
 		return score;
 	}
 	/**
-	 * Stores the last roll the player made. This is done so we can see if he scores 2 6's 2 times in a row.
+	 * Stores the last roll a player has made. This is done in order to see if he/she scores 2 6's twice in a row.
 	 * @param p
 	 */
 	public void setLastRollValue(int currentShakerValue)

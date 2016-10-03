@@ -1,9 +1,11 @@
 /**
- * Her g�r vi ind og navngiver et blueprint (class) Die.
- * Inde i den Die, har vi s� en roll. N�r vi s� vil "kalde" den i andre dele skrives der
- * die.roll(); Det betyder at den kalder klassen die, og s� derefter funktionen roll.
- * Den returnere her s� det skrevne, og vi har s� en klasse der returnere et terningekast
- * @author aleks
+ * This is the creation of our blueprint (class) Die.
+ * Inside this class we've created a method called roll
+ * If we want to call this method into another class we'll simply type die.roll(). This means that
+ * we're calling the class Die and then the method roll.
+ * This will in turn return the values seen below. What this means is that we now have a class
+ * that will simulate a diceroll.
+ * @author Aleksander/Martin
  *
  */
 public class Die 
@@ -12,7 +14,7 @@ public class Die
 	private int faceValue;
 	
 	/**
-	 * Creates the constructor Die.
+	 * Creates the constructor, Die.
 	 */
 	public Die()
 	{
