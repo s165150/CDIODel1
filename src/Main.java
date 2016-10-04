@@ -1,12 +1,11 @@
-//import desktop_resources.GUI;
 public class Main {
 
 		public static void main(String[] args) 
 		{
-			
+			//Create an new instance of the Game class
 			Game startGame = new Game();
-			//GUI.setDice(4, 4);
 			
+			//Start game from the method startGame 
 			startGame.startGame();
 			
 		}

@@ -39,9 +39,7 @@ public class Player {
 	 */
 	public  void setPlayerName(String name)
 	{
-		
 		nameOfPlayer = name;
-		
 	}
 	/**
 	 * Returns the player's name.
