@@ -7,6 +7,5 @@ public class Main {
 			
 			//Start game from the method startGame 
 			startGame.startGame();
-			
 		}
 }
