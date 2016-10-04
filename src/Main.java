@@ -1,3 +1,10 @@
+/**
+ * @author 
+ * Aleksander wrote the code, and in doing so got help with the different parts, from the team. They are listed under each class.
+ * Proofreading done by Martin
+ * Compressment of the code done by Morten N
+ *
+ */
 public class Main {
 
 		public static void main(String[] args) 

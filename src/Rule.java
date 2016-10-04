@@ -1,7 +1,15 @@
-import java.util.Scanner;
-
+/**
+ * @author Aleksander and Morten N
+ *
+ */
 public class Rule {
+	Game play;
 	
+	public Rule(Game game) {
+		play = game;
+		
+	}
+
 	/**
 	 * Creates the rule that states that if a player gets more than 40 points and then hits 2 equals, he/she wins.
 	 * @param player 
@@ -9,10 +17,11 @@ public class Rule {
 	 */
 	public void ruleForty(Player player, Shaker cup)
 	{
-		if (player.getPlayerScore()>40)
+		if (player.getPlayerScore()>400)
 		{
 			if(cup.getDie1() == cup.getDie2())
 			{
+				
 			System.out.println("You win!");
 			System.exit(0);
 			}
@@ -24,9 +33,9 @@ public class Rule {
 	 * @param player
 	 * @param cup
 	 */
-	public void ruleSnakeEyes(Player player, Shaker cup)
+	public void ruleSnakeEyes(Player player)
 	{
-		if (player.getLastRollValue() == 2 && cup.getShake() == 2)
+		if (player.getLastRollValue() == 2)
 		{
 			System.out.println("Your score has been reset. Stay away from snakes!");
 			player.resetPlayerScore();			
@@ -38,19 +47,16 @@ public class Rule {
 	 * @param player
 	 * @param cup
 	 */
-	public void ruleThemSixes(Player player, Shaker cup, Scanner scan)
+	public void ruleThemSixes(Player player, Shaker cup)
 	{
 		if (player.getLastRollValue() == 12)
 		{
 			
 			System.out.println("You just hit them double 6's. Try again and win the game");
-			System.out.println(player.getPlayerName() + " please roll the dies");
-			scan.nextLine();
-			cup.setShake();
-			player.setPlayerScore(cup.getShake());
-			player.setLastRollValue(cup.getShake());
-			//GUI.setDice(cup.getDie1(), cup.getDie2());
-			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
+			play.playerTurn(player, cup);
+			ruleSnakeEyes(player);
+			ruleEquals(player, cup);
+			
 			
 			//
 			if (player.getLastRollValue() == 12)
@@ -60,6 +66,7 @@ public class Rule {
 				System.exit(0);	
 			}
 			System.out.println("Better luck next time");
+			
 		}
 	}
 	
@@ -68,22 +75,15 @@ public class Rule {
 	 * @param player
 	 * @param cup
 	 */
-	public void ruleEquals(Player player, Shaker cup, Scanner scan)
+	public void ruleEquals(Player player, Shaker cup)
 	{
 		while (cup.getDie1() == cup.getDie2())
 		{
 			System.out.println("EXTRA TURN");
-			System.out.println(player.getPlayerName() + " please roll the dies");
-			scan.nextLine();
-			cup.setShake();
-			player.setPlayerScore(cup.getShake());
-			player.setLastRollValue(cup.getShake());
-			//GUI.setDice(cup.getDie1(), cup.getDie2());
-			System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
-			System.out.println("Sum of points: " + player.getPlayerScore());
-			ruleSnakeEyes(player, cup);
+			play.playerTurn(player, cup);
+			ruleSnakeEyes(player);
 			ruleForty(player, cup);
-			ruleThemSixes(player, cup, scan);
+			ruleThemSixes(player, cup);
 		}
 	}
 }

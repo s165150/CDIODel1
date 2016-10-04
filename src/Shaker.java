@@ -1,3 +1,7 @@
+/**
+ * @author Aleksander and Morten
+ *
+ */
 public class Shaker {
 
 	Die die1 = new Die();
