@@ -1,19 +1,20 @@
 /**
  * Player class is created to keep track of the player's name, and their current score in the game.
  * The way this is done is explained below.
- * @author aleks
+ * @author Aleksander and Morten N
  *
  */
 public class Player {
 	
+	//Creation of attributes
 	private int score = 0;
 	private String nameOfPlayer;
 	private int lastValue = 0;
+	
 	/**
 	 * Creates the constructor
-	 * @param nr reserves space for the player's number, either player 1 or player 2
-	 * @param navn reserves space for the player's name.
-	 * @param point reserves space for the player's name
+	 * @param name reserves space for the player's name.
+	 * @param point reserves space for the player's points.
 	 */
 	public Player (String name, int point)
 	{
@@ -22,9 +23,8 @@ public class Player {
 	}
 	
 	/**
-	 * calculates the player's score. This is done by having the (int point) added to the score. 
-	 * (int point) can be any int, including int sum, from the main code.
-	 * @param point
+	 * Calculates the player's score. This is done by having the (int currentShakerValue) added to the score. 
+	 * @param currentShakerValue adds the current shaker points to the total score.
 	 * @return
 	 */
 	public int setPlayerScore(int currentShakerValue)
@@ -32,17 +32,17 @@ public class Player {
 		score = score + currentShakerValue;
 		return score;
 	}
+	
 	/**
 	 * Sets the player's name
-	 * @param name
+	 * @param name sets the players name
 	 * @return
 	 */
-	public  void setPlayerName(String name)
+	public void setPlayerName(String name)
 	{
-		
 		nameOfPlayer = name;
-		
 	}
+	
 	/**
 	 * Returns the player's name.
 	 * @return
@@ -51,6 +51,7 @@ public class Player {
 	{
 		return nameOfPlayer;
 	}
+	
 	/**
 	 * Returns the player's current score.
 	 * @return
@@ -59,6 +60,7 @@ public class Player {
 	{
 		return score;
 	}
+	
 	/**
 	 * Resets a player's score to 0.
 	 * @return
@@ -68,9 +70,10 @@ public class Player {
 		score = 0;
 		return score;
 	}
+	
 	/**
 	 * Stores the last roll a player has made. This is done in order to see if he/she scores 2 6's twice in a row.
-	 * @param p
+	 * @param currentShakerValue puts currentsShakerValue to lastValue
 	 */
 	public void setLastRollValue(int currentShakerValue)
 	{

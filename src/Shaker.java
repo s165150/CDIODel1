@@ -1,8 +1,9 @@
-
 public class Shaker {
+
 	Die die1 = new Die();
 	Die die2 = new Die();
 	
+	//Creation of attributes
 	private int shakeValue;
 	
 	/**
@@ -21,6 +22,7 @@ public class Shaker {
 		die1.setRoll();
 		die2.setRoll();
 	}
+	
 	/**
 	 * Returns the value of the roll.
 	 * @return
@@ -30,6 +32,7 @@ public class Shaker {
 		shakeValue = die1.getRoll() + die2.getRoll();
 		return shakeValue;
 	}
+	
 	/**
 	 * Returns the value of Die1 from the roll.
 	 * @return
