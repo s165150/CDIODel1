@@ -17,7 +17,7 @@ public class Rule {
 	 */
 	public void ruleForty(Player player, Shaker cup)
 	{
-		if (player.getPlayerScore()>400)
+		if (player.getPlayerScore()>40)
 		{
 			if(cup.getDie1() == cup.getDie2())
 			{
