@@ -22,26 +22,20 @@ public class Game {
 				player2.setPlayerName(scan.next());
 				scan.nextLine();
 				System.out.println();
-				System.out.println("###############################################");
-				System.out.println("             " + player1.getPlayerName() + " - Score: " + player1.getPlayerScore());
-				System.out.println("             " + player2.getPlayerName() + " - Score: " + player2.getPlayerScore());
-				System.out.println("###############################################");
+				System.out.println(player1.getPlayerName() + " - Score: " + player1.getPlayerScore());
+				System.out.println(player2.getPlayerName() + " - Score: " + player2.getPlayerScore());
 			}
 	
 			//Method to play the game - This shake the cup, printout the score and make sure our rules is complied
 			public void play(Player player, Shaker cup, Rule rule)
 			{
-				System.out.println("  " + player.getPlayerName() + " please press ENTER to roll the dice");
-				System.out.println("###############################################");
+				System.out.println(player.getPlayerName() + " please press ENTER to roll the dice");
 				scan.nextLine();
 				cup.setShake();
-				System.out.println("             " + player1.getPlayerName() + " - Score: " + player1.getPlayerScore());
-				System.out.println("             " + player2.getPlayerName() + " - Score: " + player2.getPlayerScore());
-				System.out.println("###############################################");
 				player.setPlayerScore(cup.getShake());
 				player.setLastRollValue(cup.getShake());
-				System.out.println ("  Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
-				System.out.println("  Total score: " + player.getPlayerScore());
+				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
+				System.out.println("Total score: " + player.getPlayerScore());
 				rule.ruleSnakeEyes(player, cup); 
 				rule.ruleForty(player, cup);
 				rule.ruleThemSixes(player, cup, scan);
