@@ -30,14 +30,21 @@ public class Game {
 			 */
 			public void start()
 			{
+				System.out.println("Welcome to the best dice game in the world!");
+				System.out.println("The game can be played by two players.");
+				System.out.println("The person who gets to start is decided by a coin flip.");
+				System.out.println("The game has four rules:");
+				System.out.println("1) The winner will be the player who first reaches 40 points and after that roll two pairs");
+				System.out.println("2) You will loose ALL of your points if you roll snake eyes (Two ones).");
+				System.out.println("3) You will get an extra turn if you hit two of the same kind.");
+				System.out.println("4) If you hit double sixes two times in a row you win the game!");
+				System.out.println("Press ENTER to start the game");
+				scan.nextLine();
 				System.out.println("Enter name of Player 1:");
 				player1.setPlayerName(scan.next());
 				System.out.println("Enter name of Player 2:");
 				player2.setPlayerName(scan.next());
 				scan.nextLine();
-				System.out.println();
-				System.out.println(player1.getPlayerName() + " - Score: " + player1.getPlayerScore());
-				System.out.println(player2.getPlayerName() + " - Score: " + player2.getPlayerScore());
 			}
 	
 			/**
@@ -73,12 +80,14 @@ public class Game {
 			 */
 			public void playerTurn(Player player, Shaker cup)
 			{
+				System.out.println();
 				System.out.println(player.getPlayerName() + " please press ENTER to roll the dice");
 				scan.nextLine();
 				cup.setShake();
 				player.setPlayerScore(cup.getShake());
 				player.setLastRollValue(cup.getShake());
-				System.out.println ("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
+				System.out.println(player.getPlayerName() + " you got:");
+				System.out.println("Die One: " + cup.getDie1() + ", Die Two: " + cup.getDie2());
 				System.out.println("Total score: " + player.getPlayerScore());
 			}
 			

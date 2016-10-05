@@ -1,5 +1,5 @@
 /**
- * @author Aleksander and Morten
+ * @author Aleksander and Morten N
  *
  */
 public class Shaker {
