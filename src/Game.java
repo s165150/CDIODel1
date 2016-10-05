@@ -17,7 +17,7 @@ public class Game {
 	private Rule rule;
 	
 			/**
-			 * This make a new instance of the class Rule.
+			 * This make a new instance of the class Rule, and makes the current Game instance, follow, for the rule class to access.
 			 * This is NOT the optimal solution in our software! We need to work on this in another version.
 			 */
 			public Game()
