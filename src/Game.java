@@ -1,5 +1,5 @@
 /**
- * @author Aleksander
+ * @author Aleksander and Morten N
  *
  */
 import java.util.Scanner;
@@ -16,15 +16,18 @@ public class Game {
 	private Player player2 = new Player (namePlayer2, 0);
 	private Rule rule;
 	
-	
 			/**
-			 * Method we use to enter the name of the players and print the start score
+			 * This make a new instance of the class Rule and make it possible for Rule to use the class Game.
+			 * This is NOT the optimal solution in our software! We need to work on this in another version.
 			 */
-	
 			public Game()
 			{
 				rule = new Rule(this);
 			}
+			
+			/**
+			 * Method we use to enter the name of the players and print the start score
+			 */
 			public void start()
 			{
 				System.out.println("Enter name of Player 1:");
@@ -37,13 +40,24 @@ public class Game {
 				System.out.println(player2.getPlayerName() + " - Score: " + player2.getPlayerScore());
 			}
 	
-			//Method to play the game - This shake the cup, printout the score and make sure our rules is complied
+			/**
+			 * Method to play the game - This shake the cup, printout the score and make sure our rules is complied
+			 * @param player Player1 or Player2
+			 * @param cup Cup we use to roll the dice
+			 * @param rule We use rule to make sure our rules is complied
+			 */
 			public void play(Player player, Shaker cup, Rule rule)
 			{
 				playerTurn(player, cup);
 				rules(player, cup, rule);
 			}
 			
+			/**
+			 * Method for our rules
+			 * @param player Player1 or Player2
+			 * @param cup Cup we use to roll the dice
+			 * @param rule We use rule to make sure our rules is complied
+			 */
 			public void rules(Player player, Shaker cup, Rule rule)
 			{
 				rule.ruleSnakeEyes(player); 
@@ -52,6 +66,11 @@ public class Game {
 				rule.ruleEquals(player, cup);
 			}
 			
+			/**
+			 * Method we use every new turn - This shakes the cup, roll the dice, printout the score and update the total score.
+			 * @param player Player1 or Player2
+			 * @param cup Cup we use to roll the dice
+			 */
 			public void playerTurn(Player player, Shaker cup)
 			{
 				System.out.println(player.getPlayerName() + " please press ENTER to roll the dice");
@@ -63,10 +82,11 @@ public class Game {
 				System.out.println("Total score: " + player.getPlayerScore());
 			}
 			
-			//Method to start the game - The turnCount makes a "coin flip" and decides who will start the game
+			/**
+			 * Method to start the game - The turnCount makes a "coin flip" and decides who will start the game
+			 */
 			public void startGame()
 			{
-			
 			start();
 			
 				while(turnCount == 0)
@@ -81,5 +101,4 @@ public class Game {
 					play(player1, cup, rule);
 				}
 			}
-
 }

@@ -13,8 +13,8 @@ public class Player {
 	
 	/**
 	 * Creates the constructor
-	 * @param name reserves space for the player's name.
-	 * @param point reserves space for the player's points.
+	 * @param name Reserves space for the player's name.
+	 * @param point Reserves space for the player's points.
 	 */
 	public Player (String name, int point)
 	{
@@ -24,7 +24,7 @@ public class Player {
 	
 	/**
 	 * Calculates the player's score. This is done by having the (int currentShakerValue) added to the score. 
-	 * @param currentShakerValue adds the current shaker points to the total score.
+	 * @param currentShakerValue Adds the current shaker points to the total score.
 	 * @return
 	 */
 	public int setPlayerScore(int currentShakerValue)
@@ -35,7 +35,7 @@ public class Player {
 	
 	/**
 	 * Sets the player's name
-	 * @param name sets the players name
+	 * @param name Sets the players name
 	 * @return
 	 */
 	public void setPlayerName(String name)
@@ -73,7 +73,7 @@ public class Player {
 	
 	/**
 	 * Stores the last roll a player has made. This is done in order to see if he/she scores 2 6's twice in a row.
-	 * @param currentShakerValue puts currentsShakerValue to lastValue
+	 * @param currentShakerValue Puts currentsShakerValue to lastValue
 	 */
 	public void setLastRollValue(int currentShakerValue)
 	{

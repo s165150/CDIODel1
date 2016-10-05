@@ -3,12 +3,11 @@
  *
  */
 public class Shaker {
-
+	
+	//Creation of attributes and new instance
+	private int shakeValue;
 	Die die1 = new Die();
 	Die die2 = new Die();
-	
-	//Creation of attributes
-	private int shakeValue;
 	
 	/**
 	 * Creates the constructor, Shaker.
