@@ -31,13 +31,13 @@ public class Game {
 			public void start()
 			{
 				System.out.println("Welcome to the best dice game in the world!");
-				System.out.println("The game can be played by two players.");
+				System.out.println("The game must be played by two players.");
 				System.out.println("The person who gets to start is decided by a coin flip.");
 				System.out.println("The game has four rules:");
-				System.out.println("1) The winner will be the player who first reaches 40 points and after that roll two pairs");
-				System.out.println("2) You will loose ALL of your points if you roll snake eyes (Two ones).");
-				System.out.println("3) You will get an extra turn if you hit two of the same kind.");
-				System.out.println("4) If you hit double sixes two times in a row you win the game!");
+				System.out.println("1) The winner will be the player who first reaches 40 points and after that roll a pair");
+				System.out.println("2) You will loose ALL of your points if you roll snake eyes (Pair of ones).");
+				System.out.println("3) You will get an extra turn if you hit any pair of the same kind.");
+				System.out.println("4) If you hit a pair of sixes two times in a row you win the game!");
 				System.out.println("Press ENTER to start the game");
 				scan.nextLine();
 				System.out.println("Enter name of Player 1:");
