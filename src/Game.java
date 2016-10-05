@@ -17,7 +17,7 @@ public class Game {
 	private Rule rule;
 	
 			/**
-			 * This make a new instance of the class Rule and make it possible for Rule to use the class Game.
+			 * This make a new instance of the class Rule.
 			 * This is NOT the optimal solution in our software! We need to work on this in another version.
 			 */
 			public Game()
@@ -45,6 +45,14 @@ public class Game {
 				System.out.println("Enter name of Player 2:");
 				player2.setPlayerName(scan.next());
 				scan.nextLine();
+				System.out.println("Press ENTER to take the coin flip!");
+				scan.nextLine();
+				if (turnCount == 0)
+				{
+					System.out.println(player1.getPlayerName() + " won the coin flip!");
+				}
+				else
+					System.out.println(player2.getPlayerName() + " won the coin flip!");
 			}
 	
 			/**
