@@ -1,5 +1,9 @@
 # CDIO Delopgave 1 - Gruppe 16
 
+###Dice game
+
+![alt Dice](http://i.imgur.com/xQxKGF0.png)
+
 ###Collaborators
 1. **Brugernavn:** s165150 - Morten Enghausen Nielsen (s165150)
 2. **Brugernavn:** Kemikaze - Aleksander Wienziers-Madsen (s114750)
