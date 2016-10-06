@@ -20,7 +20,7 @@ rollen som projektleder, som har mulighed for at tale med kunden. Derfor er det 
 specificerer hvem, det er I stiller et spørgsmål til. I må acceptere at især kunden og til dels
 projektlederen nogle gange er lang tid om at svare.
 
-###Kundens vision:
+###Kundens vision
 
 Vi vil gerne have et system der kan bruges på maskinerne (Windows) i databarerne på DTU. Det skal
 være et spil imellem 2 personer. Spillet skal gå ud på at man kaster med et raflebæger med to
