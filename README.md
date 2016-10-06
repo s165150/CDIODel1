@@ -1,11 +1,11 @@
 # CDIO Delopgave 1 - Gruppe 16
 
-##Collaborators
-**Brugernavn:** s165150 - Morten Enghausen Nielsen (s165150)
-**Brugernavn:** Kemikaze - Aleksander Wienziers-Madsen (s114750)
-**Brugernavn:** DonPhister - Nick Skouenborg (s165233)
-**Brugernavn:** mortentang - Morten René Tang Christiansen (s162682)
-**Brugernavn:** MartinDahl96 - Jens Martin Dahl-Jensen (s165159)
+###Collaborators
+1. **Brugernavn:** s165150 - Morten Enghausen Nielsen (s165150)
+2. **Brugernavn:** Kemikaze - Aleksander Wienziers-Madsen (s114750)
+3. **Brugernavn:** DonPhister - Nick Skouenborg (s165233)
+4. **Brugernavn:** mortentang - Morten René Tang Christiansen (s162682)
+5. **Brugernavn:** MartinDahl96 - Jens Martin Dahl-Jensen (s165159)
 
 ##Opgavebeskrivelse 
 *Version 06. jan. 2016*
