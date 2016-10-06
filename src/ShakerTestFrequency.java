@@ -13,13 +13,16 @@ public class ShakerTestFrequency
 		//Define attributes for test
 		Shaker shaker = new Shaker();
 		int two = 0, three = 0, four = 0, five = 0, six = 0, seven = 0, eight = 0, nine = 0, ten = 0, eleven = 0, twelve = 0, shakeValue, controlCount = 0;
+		float percentTwo = 0, percentThree = 0, percentFour = 0, percentFive = 0, percentSix = 0, percentSeven = 0;
+		float percentEight = 0, percentNine = 0, percentTen = 0, percentEleven = 0, percentTwelve = 0;
 		
-		//While loop for shaker test - Test for 110000 shakes
-		while (controlCount < 110000)
+		//While loop for shaker test - Test for 330000 shakes
+		while (controlCount < 330000)
 		{
 			//Shake the dice from the class shaker
 			shaker.setShake();
 			shakeValue = shaker.getShake();
+			
 			
 			//Switch statement for control count and shake
 			switch (shakeValue)
@@ -38,34 +41,46 @@ public class ShakerTestFrequency
 			}	
 	    }
 		
-		//Printout to confirm result
-		System.out.println("Frequency and result of 110000 shakes");
-		System.out.println("Two: " + two);
-		System.out.println("Three: " + three);
-		System.out.println("Four: " + four);
-		System.out.println("Five: " + five);
-		System.out.println("Six: " + six);
-		System.out.println("Seven: " + seven);
-		System.out.println("Eight: " + eight);
-		System.out.println("Nine: " + nine);
-		System.out.println("Ten: " + ten);
-		System.out.println("Eleven: " + eleven);
-		System.out.println("Twelve: " + twelve);
-		System.out.println("Total: " + controlCount);
+		//Calculate percent for every possible shake
+		percentTwo = (float)two/controlCount*100;
+		percentThree = (float)three/controlCount*100;
+		percentFour = (float)four/controlCount*100;
+		percentFive = (float)five/controlCount*100;
+		percentSix = (float)six/controlCount*100;
+		percentSeven = (float)seven/controlCount*100;
+		percentEight = (float)eight/controlCount*100;
+		percentNine = (float)nine/controlCount*100;
+		percentTen = (float)ten/controlCount*100;
+		percentEleven = (float)eleven/controlCount*100;
+		percentTwelve = (float)twelve/controlCount*100;
 		
-		//Test assertEquals on 110000 shakes
-		assertEquals(3000,two,200);
-		assertEquals(6000,three,300);
-		assertEquals(9000,four,400);
-		assertEquals(12000,five,500);
-		assertEquals(15000,six,600);
-		assertEquals(18000,seven,700);
-		assertEquals(15000,eight,600);
-		assertEquals(12000,nine,500);
-		assertEquals(9000,ten,400);
-		assertEquals(6000,eleven,300);
-		assertEquals(3000,twelve,200);
-		assertEquals(110000,controlCount);		
+		//Printout to confirm result
+		System.out.println("Frequency and result of 330000 shakes");
+		System.out.println("Total of Two: " + two + " - The frequency is " + percentTwo + "% - Should be around 2.78%");
+		System.out.println("Total of Three: " + three + " - The frequency is " + percentThree + "% - Should be around 5.56%");
+		System.out.println("Total of Four: " + four + " - The frequency is " + percentFour + "% - Should be around 8.33%");
+		System.out.println("Total of Five: " + five + " - The frequency is " + percentFive + "% - Should be around 11.11%");
+		System.out.println("Total of Six: " + six + " - The frequency is " + percentSix + "% - Should be around 13.89%");
+		System.out.println("Total of Seven: " + seven + " - The frequency is " + percentSeven + "% - Should be around 16.67%");
+		System.out.println("Total of Eight: " + eight + " - The frequency is " + percentEight + "% - Should be around 13.89%");
+		System.out.println("Total of Nine: " + nine + " - The frequency is " + percentNine + "% - Should be around 11.11%");
+		System.out.println("Total of Ten: " + ten + " - The frequency is " + percentTen + "% - Should be around 8.33%");
+		System.out.println("Total of Eleven: " + eleven + " - The frequency is " + percentEleven + "% - Should be around 5.56%");
+		System.out.println("Total of Twelve: " + twelve + " - The frequency is " + percentTwelve + "% - Should be around 2.78%");
+		
+		//Test assertEquals on 330000 shakes
+		assertEquals(9000,two,500);
+		assertEquals(18000,three,600);
+		assertEquals(27000,four,800);
+		assertEquals(36000,five,1000);
+		assertEquals(45000,six,1200);
+		assertEquals(54000,seven,1400);
+		assertEquals(45000,eight,1200);
+		assertEquals(36000,nine,1000);
+		assertEquals(27000,ten,800);
+		assertEquals(18000,eleven,600);
+		assertEquals(9000,twelve,500);
+		assertEquals(330000,controlCount);		
 	}
 
 }
