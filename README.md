@@ -1,10 +1,9 @@
-DTU - 
+# CDIO delopgave 1 - Gruppe 16
 
-# CDIO delopgave 1
+##Opgavebeskrivelse 
+*Version 06. jan. 2016*
 
-# Opgavebeskrivelse - Version 06. jan. 2016
-
-#Indledning
+###Indledning
 
 I denne opgave i kurserne Indledende programmering og Udviklingsmetoder til ITsystemer
 har spilfirmaet IOOuterActive fået en opgave. I er udviklerne og er opdelt i grupper, som hver især skal
@@ -14,7 +13,7 @@ rollen som projektleder, som har mulighed for at tale med kunden. Derfor er det 
 specificerer hvem, det er I stiller et spørgsmål til. I må acceptere at især kunden og til dels
 projektlederen nogle gange er lang tid om at svare.
 
-#Kundens vision:
+###Kundens vision:
 
 Vi vil gerne have et system der kan bruges på maskinerne (Windows) i databarerne på DTU. Det skal
 være et spil imellem 2 personer. Spillet skal gå ud på at man kaster med et raflebæger med to
@@ -34,7 +33,7 @@ Vi vil gerne se en test, der beviser at raflebægeret virker korrekt, hen over 1
 Det er op til jer om dokumentation og kode skal være på dansk eller engelsk, dog skal fagudtryk
 være naturlige.
 
-#Projektlederens bemærkninger:
+###Projektlederens bemærkninger:
 
 Kravspecificering og Use cases
 Når man skal forstå hvad andre siger, kan det være en god ide at gentage med egne ord, hvad man
@@ -52,7 +51,7 @@ Jeg forventer at I udfylder rapporten og sletter mine bemærkninger (dem skrevet
 Bemærk at de diagrammer jeg har indsat (med en enkelt undtagelse) er gennerelle eksempler og at
 I selv skal lave diagrammerne.
 
-#Kode
+###Kode
 
 I skal bruge Eclipse til udvikling og vi vil gerne sikre ensartethed på tværs af både sprog og
 landegrænser. Derfor skal I bruge UTF8
@@ -69,7 +68,7 @@ set metoder hvis attributter skal kunne tilgås udefra. Jeg tror også vi
 får brug for en getSum():int metode, som giver summen af øjnene på de to terninger og en
 getEns():boolean metode, som fortæller, hvorvidt de to terninger viser samme værdi .
 Jeg forudser, at vi skal bruge noget tilfældighedsgenerering, og der kan I enten bruge metoden
-nextInt( int n) på et objekt af klassen java.util.Random eller metoden random()
+nextInt(int n) på et objekt af klassen java.util.Random eller metoden random()
 på klassen java.lang.Math . I kan læse i Java API’et hvordan metoderne fungerer.
 Jeg har kigget lidt på GUI'en, og der er en metode setDice(int, int), der placerer to
 terninger på en spilleplade med de angivne værdier.
@@ -78,7 +77,7 @@ ikke må tage mere end 333 millisekunder. Jeg har testet GUI'en, og det tager ca
 gang man kalder setDice , men det ignorerer vi, da det de efterfølgende gange kun tager ca. 2
 ms.
 
-#Test
+###Test
 
 Kunden har bedt om en test. Jeg vil foreslå, at I optæller antallet af forekomster for hver mulig
 værdi af summen (2-12).
