@@ -1,4 +1,11 @@
-# CDIO delopgave 1 - Gruppe 16
+# CDIO Delopgave 1 - Gruppe 16
+
+##Collaborators
+**Brugernavn:** s165150 - Morten Enghausen Nielsen (s165150)
+**Brugernavn:** Kemikaze - Aleksander Wienziers-Madsen (s114750)
+**Brugernavn:** DonPhister - Nick Skouenborg (s165233)
+**Brugernavn:** mortentang - Morten René Tang Christiansen (s162682)
+**Brugernavn:** MartinDahl96 - Jens Martin Dahl-Jensen (s165159)
 
 ##Opgavebeskrivelse 
 *Version 06. jan. 2016*
@@ -83,5 +90,3 @@ Kunden har bedt om en test. Jeg vil foreslå, at I optæller antallet af forekom
 værdi af summen (2-12).
 Optæl desuden antallet af kast, hvor terningerne er ens. Kontrollér at
 resultaterne stemmer overens med de teoretiske sandsynligheder.
-
-
