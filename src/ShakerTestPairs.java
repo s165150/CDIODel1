@@ -56,7 +56,7 @@ public class ShakerTestPairs
 		percent = (float)controlCount/totalCountOfShakes*100;
 		
 		//Printout to confirm result
-		System.out.println("Distribution and result " + totalCountOfShakes + " shakes");
+		System.out.println("Distribution and result");
 		System.out.println("Double One: " + pairOfOne);
 		System.out.println("Double Two: " + pairOfTwo);
 		System.out.println("Double Three: " + pairOfThree);
