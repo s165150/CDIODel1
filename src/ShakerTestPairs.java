@@ -1,6 +1,5 @@
 /**
  * @author Morten N
- *
  */
 import static org.junit.Assert.*;
 import org.junit.Test;

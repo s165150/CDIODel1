@@ -2,7 +2,6 @@
  * Player class is created to keep track of the player's name, and their current score in the game.
  * The way this is done is explained below.
  * @author Aleksander and Morten N
- *
  */
 public class Player {
 	

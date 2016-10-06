@@ -1,6 +1,5 @@
 /**
  * @author Aleksander and Morten N
- *
  */
 public class Shaker {
 	

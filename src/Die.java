@@ -6,7 +6,6 @@
  * This will in turn return the values seen below. What this means is that we now have a class
  * that will simulate a diceroll.
  * @author Aleksander and Martin
- *
  */
 public class Die {
 	
