@@ -40,7 +40,7 @@ Vi vil gerne se en test, der beviser at raflebægeret virker korrekt, hen over 1
 Det er op til jer om dokumentation og kode skal være på dansk eller engelsk, dog skal fagudtryk
 være naturlige.
 
-###Projektlederens bemærkninger:
+###Projektlederens bemærkninger
 
 Kravspecificering og Use cases
 Når man skal forstå hvad andre siger, kan det være en god ide at gentage med egne ord, hvad man
